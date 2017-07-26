@@ -1,7 +1,7 @@
 /* Classe principale de la barre de navigation */
 .navbar-default {
   /* Couleur de fond de la barre de navigation */
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.3);
   border-color: #FFF;
 }
 /* Couleur des titres affichés dans la barre */
@@ -27,14 +27,14 @@
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #f2f2f2;
-  background-color: #1f1f1f;
+  background-color: rgba(31, 31, 31, 0.3);
 }
 /* Couleur utilisée pour un menu dépliant lorsqu'il est ouvert */
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   color: #FFF;
-  background-color: #1f1f1f;
+  background-color: rgba(31, 31, 31, 0.3);
 }
 /* Caret */
 .navbar-default .navbar-nav > .dropdown > a .caret {
@@ -58,14 +58,14 @@
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #FFF;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    background-color: #1f1f1f;
+    background-color: rgba(31, 31, 31, 0.3);
     color: #777;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
@@ -74,7 +74,7 @@
   }
 }
 .dropdown-menu {
-  background-color: #1f1f1f;
+  background-color: rgba(31, 31, 31, 0.3);
 }
 .navbar,
 .navbar-default,

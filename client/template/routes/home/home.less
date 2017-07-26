@@ -1,33 +1,173 @@
 // -------------------  COULEUR -------------------
-@couleur-fond-plant-1: #FF4136;
-@couleur-text-plant-1: #F4F4F4;
+@couleur-primaire-fond: #24292e;
 
-@couleur-fond-plant-2: #111;
-@couleur-text-plant-2: #FFF;
+@couleur-fond-plant-1: @couleur-primaire-fond;
+@couleur-text-plant-1: #AAA;
 
-@couleur-fond-plant-3: #AAA;
-@couleur-text-plant-3: #000;
+@couleur-fond-plant-2: @couleur-primaire-fond;
+@couleur-text-plant-2: #AAA;
 
-@couleur-fond-plant-4: #F4F4F4;
-@couleur-text-plant-4: #F4F4F4;
+@couleur-fond-plant-3: @couleur-primaire-fond;
+@couleur-text-plant-3: #AAA;
+
+@couleur-fond-plant-4: @couleur-primaire-fond;
+@couleur-text-plant-4: #AAA;
+
+// -------------------  Class ------------------
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
 // -------------------  less -------------------
 #plant-1{
     height: 25em;
     color: @couleur-text-plant-1;
     background-color: @couleur-fond-plant-1;
+    text-align: center;
+    // animation
+    animation-duration: 400ms;
+    h1{
+        padding-top: 3em;
+        color: #f4f4f4;
+    }
+    button{
+        margin-top: 1em;
+    }
+    .down-arrow{
+        color: #f4f4f4;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 21em;
+    }
+    img[src="/images/down-arrow.svg"]{
+        width: 1em;
+        height: 1em;
+    }
 }
 #plant-2{
-    height: 25em;
+    height: 31em;
     color: @couleur-text-plant-2;
     background-color: @couleur-fond-plant-2;
+    // animation
+    animation-duration: 600ms;
+    text-align: center;
+    .mac-window{
+        @mac-border-radius: 4px;
+        height: 28em;
+        max-width: 45em;
+        background-color: #fff;
+        border-radius: @mac-border-radius;
+
+        box-shadow: 0 10px 25px 15px rgba(0,0,0, 0.2);
+        .mac-window-header{
+            text-align: left;
+            height: 1.5em;
+            width: 100%;
+            border-top-right-radius: @mac-border-radius;
+            border-top-left-radius: @mac-border-radius;
+            background-color: #dcdcdc;
+
+            padding-left: 0.7em;
+            .mac-red-btn{
+                color: #eb6b60 ;
+                font-size: 0.8em;
+            }
+            .mac-ylw-btn{
+                color: #f6c251 ;
+                font-size: 0.8em;
+            }
+            .mac-grn-btn{
+                color: #64ca57 ;
+                font-size: 0.8em;
+            }
+
+            .mac-url-control{
+                display: inline-block;
+                height: 1em;
+                width: 86%;
+
+                padding-left: 1em;
+                font-size: 0.8em;
+                line-height: 0.8em;
+
+                border-radius: 3px;
+                background-color: #fff;
+                border: 1px solid rgba(0,0,0, 0.3);
+            }
+        }
+        .mac-in-window{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
 }
 #plant-3{
     height: 25em;
     color: @couleur-text-plant-3;
+    text-align: center;
+    color: #f4f4f4;
+    
     background-color: @couleur-fond-plant-3;
+    // animation
+    animation-duration: 800ms;
+
+    font-family: 'Roboto', 'helvetica';
+    #titre-plant-3{
+        margin-bottom: 2em;
+    }
+    .col-md-2{
+        h4{
+            margin-bottom: 1em;
+        }
+        img{
+            width: 4em;
+            height: 4em;
+        }
+    }
 }
 #plant-4{
     height: 25em;
     color: @couleur-text-plant-4;
     background-color: @couleur-fond-plant-4;
+    // animation
+    animation-duration: 1000ms;
+}
+
+
+// ------- fix problème de couleur de boutton dans bootstrap "outline override"
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+.btn-primary.btn-outline {
+    color: #428bca;
+}
+
+.btn-success.btn-outline {
+    color: #5cb85c;
+}
+
+.btn-info.btn-outline {
+    color: #5bc0de;
+}
+
+.btn-warning.btn-outline {
+    color: #f0ad4e;
+}
+
+.btn-danger.btn-outline {
+    color: #d9534f;
+}
+
+.btn-primary.btn-outline:hover,
+.btn-success.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+    color: #fff;
 }
