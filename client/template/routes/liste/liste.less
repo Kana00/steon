@@ -1,0 +1,80 @@
+@header-text-list-color: #FFF;
+@header-bg-list-color: #FF851B;
+#liste-main{
+    display: flex;
+    color: white;
+    .nav-collection{
+        height: 933px;
+        width: 35em;
+
+        border-right: 2px solid rgba(0,0,0, 0.4);
+
+        .list-head{
+            // fuits légume préparations personnel
+            display: flex;
+            justify-content: space-between;
+            height: 3.5em;
+            color: @header-text-list-color;
+            background-color: @header-bg-list-color;
+            line-height: 3.5em;
+
+            text-align: center;
+            .collection-select{
+                width: 35em / 4;
+                &:hover{
+                    transition: 200ms;
+                    cursor: pointer;
+                    background-color: darken(@header-bg-list-color, 10%);
+                }
+            }
+        }
+        .list-search{
+            color: #222;
+            background-color: #FFF;
+            #search{
+                // suppréssion de l'héritage
+                border: none;
+                outline: none;
+                // forcer les dimensions
+                height: 2.5em;
+                width: 34.8em; // -0.2 em car le champ input est z-index trop élevée, on ne voir plus le border
+                // pour éviter que la zone de saisie soit au bord de la fenêtre
+                padding-left: 1em;
+                // séparation pour les items de la collections
+                border-bottom: 2px solid rgba(0,0,0, 0.4);
+            }
+        }
+        @sizeOf-height-item: 2em;
+        .all-item-collection{
+            width: 34.8em;
+            .this-item{
+                display: flex;
+
+                height: @sizeOf-height-item;
+                line-height: @sizeOf-height-item ;
+                font-size: 1.5em;
+
+                color:#222;
+                background-color: #FFF;
+
+                .indice{
+                    padding: 0 0.5em 0 0.5em;
+                    color: rgba(0,0,0, 0.3);
+                    background-color: #3D9970;
+                }
+                .name{
+                    padding-left: 1em;
+                }
+                position: relative; // parent
+                .controle{
+                    position: absolute; // enfant
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    .my-bolle{
+
+    }
+}
