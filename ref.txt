@@ -7,3 +7,4 @@ http://clrs.cc/
 https://github.com/
 https://jqueryui.com/autocomplete/
 http://fontawesome.io/icons/
+https://www.w3schools.com/cssref

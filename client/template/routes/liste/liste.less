@@ -1,80 +1,177 @@
 @header-text-list-color: #FFF;
-@header-bg-list-color: #FF851B;
+@header-bg-list-color: #0074D9;
+@sizeOf-height-window-list: 1080px;
+@background-liste:  #001f3f;
 #liste-main{
-    display: flex;
     color: white;
     .nav-collection{
-        height: 933px;
-        width: 35em;
+        height: @sizeOf-height-window-list;
+        //width: 35em;
 
-        border-right: 2px solid rgba(0,0,0, 0.4);
+        border-right: 5px solid rgba(0,0,0, 0.4);
 
-        .list-head{
-            // fuits légume préparations personnel
-            display: flex;
-            justify-content: space-between;
-            height: 3.5em;
+        background-color: @background-liste;
+
+        .list-bottom{
             color: @header-text-list-color;
             background-color: @header-bg-list-color;
             line-height: 3.5em;
 
             text-align: center;
+
             .collection-select{
-                width: 35em / 4;
+                border: 1px solid black;
                 &:hover{
                     transition: 200ms;
                     cursor: pointer;
-                    background-color: darken(@header-bg-list-color, 10%);
+                    background-color: darken(@header-bg-list-color, 10%); 
                 }
             }
+
+            
         }
         .list-search{
             color: #222;
-            background-color: #FFF;
+            background-color: @header-bg-list-color;
+            border-bottom: 5px solid rgba(0,0,0, 0.5);
+            padding: 1em;
             #search{
                 // suppréssion de l'héritage
                 border: none;
+                border-radius: 5px;
                 outline: none;
                 // forcer les dimensions
-                height: 2.5em;
-                width: 34.8em; // -0.2 em car le champ input est z-index trop élevée, on ne voir plus le border
+                height: 3.5em;
+                width: 100%;
                 // pour éviter que la zone de saisie soit au bord de la fenêtre
                 padding-left: 1em;
+
+                font-size: 1.3em;
                 // séparation pour les items de la collections
-                border-bottom: 2px solid rgba(0,0,0, 0.4);
+                //border-bottom: 2px solid rgba(0,0,0, 0.4);
             }
         }
-        @sizeOf-height-item: 2em;
+        @sizeOf-height-item: 2.1em;
+        //@sizeOf-width-item: 33em;
+        @couleur-item: #CECECE;
         .all-item-collection{
-            width: 34.8em;
+            //width: @sizeOf-width-item;
+            margin: auto;
+            //box-shadow: 0 0 10px 1px rgba(0,0,0, 0.3) inset; 
             .this-item{
                 display: flex;
-
+                margin: 0.5em;
                 height: @sizeOf-height-item;
                 line-height: @sizeOf-height-item ;
-                font-size: 1.5em;
+                font-size: 1.8em;
 
                 color:#222;
-                background-color: #FFF;
+                background-color: @couleur-item;
+                
+                //border: 2px solid rgba(0,0,0, 1);
+                border-bottom: 5px solid darken(#0074D9, 20%);
+                //border-radius: 15px;
+                //border: 1px solid rgba(0,0,0, 0.3);
+                //border-bottom: 2px solid rgba(0,0,0, 0.4);
 
                 .indice{
                     padding: 0 0.5em 0 0.5em;
-                    color: rgba(0,0,0, 0.3);
-                    background-color: #3D9970;
+                    color: rgba(255,255,255, 0.8);
+                    background-color: #0074D9;
+                    border-right: 1px solid rgba(0,0,0, 0.3);
+                    &:nth-child(1){
+                        //border-top-left-radius: 15px;
+                        //border-bottom-left-radius: 15px;
+                    }
                 }
                 .name{
                     padding-left: 1em;
+                    overflow: hidden;
                 }
                 position: relative; // parent
-                .controle{
+                @btn-color: #222;
+                .controle-add{
                     position: absolute; // enfant
                     right: 0;
+                    border: none;
+                    height: @sizeOf-height-item - 0.2em;
+                    background-color: @btn-color;
+                    color: #F4F4F4;
+                    padding-right: 1em;
+                    padding-left: 1em;
+
+                    //border-top-right-radius: 15px;
+                    //border-bottom-right-radius: 15px;
+                    &:hover{
+                        cursor: pointer;
+                        background-color: lighten(@btn-color,15%);
+                    }
+                    &:active{
+                        background-color: #FF851B;
+                    }
+
+                }
+                .controle-less{
+                    position: absolute; // enfant
+                    right:  2.7em;
+                    border: none;
+                    height: @sizeOf-height-item - 0.2em;
+                    background-color: rgba(0,0,0, 0.6);
+
+                    background-color: @btn-color;
+                    color: #F4F4F4;
+
+                    padding-right: 1em;
+                    padding-left: 1em;
+
+                    &:hover{
+                        cursor: pointer;
+                        background-color: lighten(@btn-color,15%);
+                    }
+                    &:active{
+                        background-color: #FF851B;
+                    }
                 }
             }
         }
     }
 
+    @couleur-cadre: #0074D9;
     .my-bolle{
+        padding: 1em 1em 1em 1em;
+        .today{
+            width: 100%;
+            height: @sizeOf-height-window-list - 100px;
 
+            border-radius: 10px;
+            border: 5px solid darken(@couleur-cadre, 10%);
+            box-shadow: 0 2px 2px 5px rgba(0,0,0, 0.4) inset,
+                        1px 5px 0 0 darken(@couleur-cadre, 30%);
+
+            background-color: #414141;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.07' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+
+            .item-today{
+                //height: 5em;
+
+
+                line-height: 5em;
+                border-radius: 5px;
+                margin: 0.3em;
+
+                /*box-shadow: 6px 10px 20px 3px rgba(255,255,255, 0.01) inset,
+                            -6px 10px 20px 3px rgba(255,255,255, 0.01) inset,
+                            1px 2px 5px 1px rgba(0,0,0, 0.5);*/
+                border-top: 2px solid rgba(255,255,255, 0.05);
+                border-bottom: 5px solid rgba(0,0,0, 0.3);
+                //border-bottom: 2px solid rgba(0,0,0, 0.5);
+                background-color: #252525;
+                color: #EEE;
+                .num, .name-item, .cg-this-item{
+                    font-size: 2em;
+                }
+                
+            }
+        }
     }
 }

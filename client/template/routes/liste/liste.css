@@ -1,62 +1,125 @@
 #liste-main {
-  display: flex;
   color: white;
 }
 #liste-main .nav-collection {
-  height: 933px;
-  width: 35em;
-  border-right: 2px solid rgba(0, 0, 0, 0.4);
+  height: 1080px;
+  border-right: 5px solid rgba(0, 0, 0, 0.4);
+  background-color: #001f3f;
 }
-#liste-main .nav-collection .list-head {
-  display: flex;
-  justify-content: space-between;
-  height: 3.5em;
+#liste-main .nav-collection .list-bottom {
   color: #FFF;
-  background-color: #FF851B;
+  background-color: #0074D9;
   line-height: 3.5em;
   text-align: center;
 }
-#liste-main .nav-collection .list-head .collection-select {
-  width: 8.75em;
+#liste-main .nav-collection .list-bottom .collection-select {
+  border: 1px solid black;
 }
-#liste-main .nav-collection .list-head .collection-select:hover {
+#liste-main .nav-collection .list-bottom .collection-select:hover {
   transition: 200ms;
   cursor: pointer;
-  background-color: #e76b00;
+  background-color: #0059a6;
 }
 #liste-main .nav-collection .list-search {
   color: #222;
-  background-color: #FFF;
+  background-color: #0074D9;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+  padding: 1em;
 }
 #liste-main .nav-collection .list-search #search {
   border: none;
+  border-radius: 5px;
   outline: none;
-  height: 2.5em;
-  width: 34.8em;
+  height: 3.5em;
+  width: 100%;
   padding-left: 1em;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  font-size: 1.3em;
 }
 #liste-main .nav-collection .all-item-collection {
-  width: 34.8em;
+  margin: auto;
 }
 #liste-main .nav-collection .all-item-collection .this-item {
   display: flex;
-  height: 2em;
-  line-height: 2em;
-  font-size: 1.5em;
+  margin: 0.5em;
+  height: 2.1em;
+  line-height: 2.1em;
+  font-size: 1.8em;
   color: #222;
-  background-color: #FFF;
+  background-color: #CECECE;
+  border-bottom: 5px solid #003d73;
   position: relative;
 }
 #liste-main .nav-collection .all-item-collection .this-item .indice {
   padding: 0 0.5em 0 0.5em;
-  color: rgba(0, 0, 0, 0.3);
-  background-color: #3D9970;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #0074D9;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
 #liste-main .nav-collection .all-item-collection .this-item .name {
   padding-left: 1em;
+  overflow: hidden;
 }
-#liste-main .nav-collection .all-item-collection .this-item .controle {
+#liste-main .nav-collection .all-item-collection .this-item .controle-add {
   position: absolute;
   right: 0;
+  border: none;
+  height: 1.9em;
+  background-color: #222;
+  color: #F4F4F4;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+#liste-main .nav-collection .all-item-collection .this-item .controle-add:hover {
+  cursor: pointer;
+  background-color: #484848;
+}
+#liste-main .nav-collection .all-item-collection .this-item .controle-add:active {
+  background-color: #FF851B;
+}
+#liste-main .nav-collection .all-item-collection .this-item .controle-less {
+  position: absolute;
+  right: 2.7em;
+  border: none;
+  height: 1.9em;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #222;
+  color: #F4F4F4;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+#liste-main .nav-collection .all-item-collection .this-item .controle-less:hover {
+  cursor: pointer;
+  background-color: #484848;
+}
+#liste-main .nav-collection .all-item-collection .this-item .controle-less:active {
+  background-color: #FF851B;
+}
+#liste-main .my-bolle {
+  padding: 1em 1em 1em 1em;
+}
+#liste-main .my-bolle .today {
+  width: 100%;
+  height: 980px;
+  border-radius: 10px;
+  border: 5px solid #0059a6;
+  box-shadow: 0 2px 2px 5px rgba(0, 0, 0, 0.4) inset, 1px 5px 0 0 #002240;
+  background-color: #414141;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.07' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+}
+#liste-main .my-bolle .today .item-today {
+  line-height: 5em;
+  border-radius: 5px;
+  margin: 0.3em;
+  /*box-shadow: 6px 10px 20px 3px rgba(255,255,255, 0.01) inset,
+                            -6px 10px 20px 3px rgba(255,255,255, 0.01) inset,
+                            1px 2px 5px 1px rgba(0,0,0, 0.5);*/
+  border-top: 2px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.3);
+  background-color: #252525;
+  color: #EEE;
+}
+#liste-main .my-bolle .today .item-today .num,
+#liste-main .my-bolle .today .item-today .name-item,
+#liste-main .my-bolle .today .item-today .cg-this-item {
+  font-size: 2em;
 }
