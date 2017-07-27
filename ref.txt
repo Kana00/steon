@@ -2,3 +2,4 @@ http://iron-meteor.github.io/iron-router/#layouts
 https://v4-alpha.getbootstrap.com/components/navbar/
 http://fr.discovermeteor.com/
 http://www.journaldunet.com/developpeur/pratique/developpement/17874/quelles-modifications-faire-dans-les-css-pour-changer-la-couleur-de-la-navbar-barre-de-navigation-dans-bootstrap.html
+https://docs.mongodb.com/manual/core/data-modeling-introduction/
