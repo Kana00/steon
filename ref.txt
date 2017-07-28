@@ -8,3 +8,9 @@ https://github.com/
 https://jqueryui.com/autocomplete/
 http://fontawesome.io/icons/
 https://www.w3schools.com/cssref
+https://v4-alpha.getbootstrap.com/content/tables/
+http://www.chartjs.org/
+http://www.chartjs.org/docs/latest/
+https://github.com/donskifarrell/meteor-chartjs
+https://github.com/donskifarrell/meteor-chartjs/blob/master/example/example.js
+issu => https://forums.meteor.com/t/charts-js-not-working/34244/5

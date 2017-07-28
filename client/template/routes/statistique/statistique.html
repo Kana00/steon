@@ -1,5 +1,46 @@
 <template name="statistique">
 
-test
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <h1>Statistique</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <table class="table table-white table-bordered">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>Intvale</th>
+                    <th>moyenne</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ajourd'hui</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>5 derniers jours</td>
+                    <td>105</td>
+                </tr>
+                <tr>
+                    <td>30 derniers jours</td>
+                    <td>120</td>
+                </tr>
+            </tbody>
+        </table> 
+
+    </div>
+</div> 
+<div class="row">
+    <div class="col-md-10 col-md-offset-1 table-white">
+        <h2>Les 6 derniers jours</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10 div col-md-offset-1 table-stats">
+        <canvas id="chats-last-5-day" width="680" height="400"></canvas>
+    </div>
+</div>
 
 </template>
